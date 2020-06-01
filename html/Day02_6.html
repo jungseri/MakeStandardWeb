@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>layout06</title>
+<!--css-->
+    <style>
+    * {margin: 0; padding: 0;}
+    #wrap{
+    
+    }
+    #header{
+        width: 100%; height: 140px; line-height: 140px; background: aqua;
+    }
+    #banner{
+        width: 100%; height: 450px; line-height: 450px; background: burlywood;
+    }
+    #contents{
+        width: 100%; height: 950px; line-height: 950px; background:red;
+    }
+    #footer{
+        width: 100%; height: 220px; line-height: 220px; background: coral;
+    }
+    /* .header-container
+    {margin:0 auto;  width: 1100px; height: 140px; background: #999;}
+    .banner-container
+    {margin:0 auto;  width: 1100px; height: 450px; background: #888;}
+    .contents-container
+    {margin:0 auto;  width: 1100px; height: 950px; background: #777;}
+    .footer-container
+    {margin:0 auto;  width: 1100px; height: 220px; background: #666;} */
+    .container
+        {margin:0 auto;  width: 1100px; height: inherit; text-align: center; color: white; font-size: 40px; background: rgba(0, 0, 0, 0.3);}
+
+    /*클래스는 상속받을 수 있기때문에 이렇게 하나하나 값을 적어도 되지만,
+    class부분만 이름을 다같게해서 부모태그를 상속받게해서 사이즈를 맞출수 있음*/
+    </style>
+
+</head>
+<body>
+    <div id = "wrap">
+        <div id ="header">
+            <div class="container">header</div>
+        </div>
+        <div id ="banner">
+            <div class="container">banner</div>
+        </div>
+        <div id ="contents">
+            <div class="container">contents</div>
+        </div>
+        <div id="footer">
+            <div class="container">container</div>
+        </div>
+    </div>
+</body>
+</html>
