@@ -28,15 +28,15 @@
 /*평소에 숨겨놓는데 탭을 누르면 나타남.*/
 
 /*레이아웃*/
-#wrap {}
+/* #wrap {} */
 
 #header {
         height: 325px;
-        background: url(../webstandard2019-master/img/header_bg.jpg) repeat-x center top;
+        background: url(../img/header_bg.jpg) repeat-x center top;
 }
 
 /*기본값은 이미지 무한 반복임*/
-#contents {}
+/* #contents {} */
 
 #footer {
         border-top: 1px solid #eeeeee;
@@ -69,7 +69,7 @@
 /* background: rgba(255, 11, 11, 0.3)*/
 
 /* header */
-.header {}
+/* .header {} */
 
 .header .header-menu {
         text-align: right;
@@ -126,7 +126,7 @@
         height: 60px;
         display: inline-block;
         margin: 0 3px;
-        background: url(../webstandard2019-master/img/icon.png);
+        background: url(../img/icon.png);
 }
 
 #icon1 {
@@ -224,7 +224,7 @@
         right: 0;
         width: 60px;
         height: 60px;
-        background: url(../webstandard2019-master/img/icon.png) no-repeat 0 -600px;
+        background: url(../img/icon.png) no-repeat 0 -600px;
 }
 
 /*배너*/
@@ -239,7 +239,7 @@
         top: 80px;
         width: 43px;
         height: 43px;
-        background: url(../webstandard2019-master/img/icon.png) no-repeat -150px 0px;
+        background: url(../img/icon.png) no-repeat -150px 0px;
 }
 
 .ban a.next {
@@ -248,7 +248,7 @@
         top: 80px;
         width: 43px;
         height: 43px;
-        background: url(../webstandard2019-master/img/icon.png) no-repeat -150px -43px;
+        background: url(../img/icon.png) no-repeat -150px -43px;
 }
 
 .ban a.prev:hover {
@@ -334,7 +334,7 @@
         display: block;
         width: 60px;
         height: 60px;
-        background: url(../webstandard2019-master/img/icon.png) no-repeat;
+        background: url(../img/icon.png) no-repeat;
         position: absolute;
 }
 
@@ -411,13 +411,13 @@
         font-weight: bold;
 }
 
-.notice ul {}
+/* .notice ul {} */
 
 .notice ul li {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        background: url(../webstandard2019-master/img/dot.gif) no-repeat 0 8px;
+        background: url(../img/dot.gif) no-repeat 0 8px;
         padding-left: 8px;
 }
 
@@ -430,7 +430,7 @@
         right: 0;
         top: 0;
         display: block;
-        background: url(../webstandard2019-master/img/icon.png) -150px -90px;
+        background: url(../img/icon.png) -150px -90px;
         width: 17px;
         height: 17px;
 }
@@ -448,11 +448,11 @@
         font-weight: bold;
 }
 
-.notice2 ul {}
+/* .notice2 ul {} */
 
 .notice2 ul li {
         overflow: hidden;
-        background: url(../webstandard2019-master/img/dot.gif) no-repeat 0 8px;
+        background: url(../img/dot.gif) no-repeat 0 8px;
         padding-left: 8px;
 }
 
@@ -475,7 +475,7 @@
         right: 0;
         top: 0;
         display: block;
-        background: url(../webstandard2019-master/img/icon.png) -150px -90px;
+        background: url(../img/icon.png) -150px -90px;
         width: 17px;
         height: 17px;
 }
@@ -490,7 +490,7 @@
         right: 0;
         top: 0;
         display: block;
-        background: url(../webstandard2019-master/img/icon.png) -150px -90px;
+        background: url(../img/icon.png) -150px -90px;
         width: 17px;
         height: 17px;
 }
@@ -502,14 +502,14 @@
         font-weight: bold;
 }
 
-.notice3 ul {}
+/* .notice3 ul {} */
 
 .notice3 li {
         position: relative;
         padding: 8px 0px 14px 60px;
 }
 
-.notice3 li a {}
+/* .notice3 li a {} */
 
 .notice3 li a img {
         width: 50px;
@@ -541,7 +541,7 @@ overflow: hidden; text-overflow: ellipsis; white-space: nowrap; : 긴문장 한�
 */
 
 /*마우스 오버효과*/
-.notice_hover {}
+/* .notice_hover {} */
 
 .notice_hover h4 {
         font: 14px;
@@ -565,7 +565,7 @@ overflow: hidden; text-overflow: ellipsis; white-space: nowrap; : 긴문장 한�
         margin-right: 0;
 }
 
-.notice_hover li a {}
+/* .notice_hover li a {} */
 
 .notice_hover li span {
         position: relative;
@@ -659,7 +659,7 @@ overflow: hidden; text-overflow: ellipsis; white-space: nowrap; : 긴문장 한�
 .tab_manu ul li ul li {
         float: none;
         border: 0px;
-        background: url(../webstandard2019-master/img/dot.gif) no-repeat 9px 8px;
+        background: url(../img/dot.gif) no-repeat 9px 8px;
         padding-left: 18px;
 }
 
@@ -725,7 +725,7 @@ overflow: hidden; text-overflow: ellipsis; white-space: nowrap; : 긴문장 한�
 
 .menu5>ul>li {
         overflow: hidden;
-        background: url(../webstandard2019-master/img/dot.gif) no-repeat 0px 8px;
+        background: url(../img/dot.gif) no-repeat 0px 8px;
         padding-left: 8px;
         padding-bottom: 2px;
 }
@@ -781,7 +781,7 @@ overflow: hidden; text-overflow: ellipsis; white-space: nowrap; : 긴문장 한�
         display: block;
         width: 23px;
         height: 23px;
-        background: url(../webstandard2019-master/img/icon.png) no-repeat;
+        background: url(../img/icon.png) no-repeat;
 }
 
 .gallery .gallery_btn li.gb_icon1 a {
@@ -816,7 +816,7 @@ overflow: hidden; text-overflow: ellipsis; white-space: nowrap; : 긴문장 한�
         background-position: -173px -189px;
 }
 
-.gallery .gallery_img {}
+/* .gallery .gallery_img {} */
 
 .gallery .gallery_img img {
         width: 100%;
@@ -837,6 +837,7 @@ overflow: hidden; text-overflow: ellipsis; white-space: nowrap; : 긴문장 한�
         margin-bottom: 15px;
         background: #f2f4f5;
         padding: 15px;
+
 }
 
 .login_header {
@@ -906,6 +907,9 @@ overflow: hidden; text-overflow: ellipsis; white-space: nowrap; : 긴문장 한�
         color: #0093bd;
         padding-bottom: 4px;
         font-weight: 700;
+        margin-top: 20px;
+        padding-top: 10px;
+        border-top: 1px solid #bebebe;
 }
 
 .popup ul {
@@ -926,42 +930,35 @@ overflow: hidden; text-overflow: ellipsis; white-space: nowrap; : 긴문장 한�
         width: 100%;
 }
 
-/*게시판5*/
-.menu5{
-        margin-top: 10px;
-        border: 1px solid #ccc;
-        
+/*footer작업*/
+.footer{
+        padding: 25px 0;
+        text-align: center;
 }
-.notice5 {
-        padding: 5px;
-        margin-left: 10px;
-        margin-right: 10px;
-        border-bottom : 1px solid #ccc;
+.footer ul{
+        margin-bottom: 20px;
+}
+.footer li {
         position: relative;
-        /* margin-bottom: -1px; */
+        display: inline;
+        /*float대신에, text-align: center; 를쓰기 위해서*/
+        padding: 0 7px 0 10px;
 }
 
-.notice5>h4 {
-        color: deeppink;
+.footer li:before {
+        content: '';
+        width: 1px;
+        height: 12px;
+        background: #ccc;
+        position: absolute;
+        left: 0;
+        top: 2px;
 }
 
-.notice5>h4>span {
-        color: cornflowerblue;
+.footer li:first-child:before {
+        width: 0;
+        height: 0;
 }
 
-.notice5>h4>a {
-        float: right;
-        font-style: normal;
-        color: #aaaaaa;
-        font-size: 11px;
-        line-height: 20px;
-}
-
-.notice5_notice {
-        padding: 5px 0 5px 10px;
-        /* border: 1px solid #ccc; */
-        margin-top: -1px;
-        
-}
-
-/*게시판4*/
+/*css에서 컨텐츠 넣기
+:before을 넣은 후, content에 글을 넣으면 컨텐츠에 글이 추가됨*/

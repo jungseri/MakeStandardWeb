@@ -27,7 +27,7 @@ img, fieldset {border: 0 none;}
 .ir_su {overflow: hidden; position: absolute; height: 0; line-height: 0; text-indent: -9999px;}
 
 /*폰트 스타일 초기화*/
-em {font-style: normal;}
+em,address {font-style: normal;}
 
 /*블릿기호 초기화*/
 dl,ul,ol,li,menu{list-style: none; padding: 0px; margin: 0px;}
