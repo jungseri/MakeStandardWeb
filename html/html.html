@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <!--글자설정-->
+    <meta name="auther" content="webmaker">
+    <!--누가 썻는지, 만들었는지이름, 사이트에 대한 설명-->
+    <meta name="description" content="웹 표준을 준수한 사이트 예제입니다.">
+    <meta name="keywords" content="웹스토리보이, 웹표준, 웹접근성, 사이트">
+    <meta name="generator" content="breakets">
+    <title>layout08</title>
+
+    <!--CSS Style-->
+    <!--순서대로 적용되니까 우선순위생각해서 적용해야함.-->
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- <link rel="stylesheet" href="../css/Day02_8.css"> -->
+    <!-- 웹폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+<style>
+
+/*레이아웃*/
+/* #wrap {} */
+
+#header {
+        height: 325px;
+        background: url(../img/header_bg.jpg) repeat-x center top;
+}
+
+/*기본값은 이미지 무한 반복임*/
+/* #contents {} */
+
+#footer {
+        border-top: 1px solid #eeeeee;
+}
+
+/*컨텐츠 레이아웃*/
+#cont_nav {
+        background: #f6fdff;
+        display: none;
+}
+
+#cont_tit {
+        background: #EAF7FD;
+}
+
+#cont_ban {
+        background: #dceff7;
+}
+
+#cont_cont {
+        background: #f6fdff;
+}
+
+/*컨테이너*/
+.container {
+        width: 990px;
+        margin: 0 auto;
+        height: inherit;
+}
+
+/* background: rgba(255, 11, 11, 0.3)*/
+
+/* header */
+/* .header {} */
+
+.header .header-menu {
+        text-align: right;
+        padding-right: 20px;
+}
+
+/*a에는 안먹히는 이유는 텍스트는 인라인 구조인데 전체 구조가 없음
+자기자신이 전체 영역이기 때문에 align이 안먹힘 그 위에 a태그의 부모
+박스에 줘야 먹히는 거임.*/
+.header .header-menu a {
+        color: #fff;
+        padding: 10px 5px 10px 13px;
+        display: inline-block;
+}
+
+/*글씨태그는 인라인 태그기 때문에 위 아래가 안먹힘. 좌우만 바뀜
+위 아래를 바꿀려면 a성질을 block로 바꿔서, float 으로 오른쪽 정렬이 먹히지만
+글의 순서가 바뀌기 때문에 차라리 display부분에 inline-block으로 먹으면
+순서가 안바뀌고 쉽게 오른쪽 정렬이 됨. 이 인라인과 block개념과 dispaly개념을
+잘알면 html 코딩이 쉬움.*/
+.header .header-menu a:hover {
+        color: #666;
+}
+
+.header .header-tit {
+        text-align: center;
+}
+
+.header .header-tit h1 {
+        display: inline-block;
+        font-size: 28px;
+        color: white;
+        padding: 8px 20px 6px 20px;
+        margin-top: 40px;
+        text-transform: uppercase;
+}
+
+/*??*/
+.header .header-tit a {
+        display: inline-block;
+        color: white;
+        font-size: 18px;
+        padding: 5px 20px 6px 20px;
+}
+
+/*a구역을 줄여서 밑으로 내리기위해 inline-block으로 해줌 */
+.header .header-icon {
+        text-align: center;
+        margin: 30px;
+}
+
+.header .header-icon a {
+        width: 60px;
+        height: 60px;
+        display: inline-block;
+        margin: 0 3px;
+        background: url(../img/icon.png);
+}
+
+#icon1 {
+        background-position: 0 0;
+}
+
+#icon2 {
+        background-position: 0 -60px;
+}
+
+#icon3 {
+        background-position: 0 -120px;
+}
+
+#icon4 {
+        background-position: 0 -180px;
+}
+
+#icon1:hover {
+        background-position: -60px 0;
+}
+
+#icon2:hover {
+        background-position: -60px -60px;
+}
+
+#icon3:hover {
+        background-position: -60px -120px;
+}
+
+#icon4:hover {
+        background-position: -60px -180px;
+}
+
+/*이거 안됐던 이유가 그거임. a태그랑 class랑 같아서 그랬나봄 몰라 중복되는거 아니니까 id로 넣자*/
+
+/*floar: left로 인한 영역깨짐(height:0) 방지법
+1. 깨지는 영역에 똑같이 float: left를 사용한다. (X)
+-> 결국 모든 박스에 float:left를 사용해야한다는 점에서 좋지않음
+2. float의 성질을 차단하는 clear : both;를 사용한다. (X)
+-> 어떤 영역이 깨졌는지 찾기 어려움.
+3. float을 사용한 상위 박스한테 over flow을 사용.(O)
+-> 현재 제일 많이 사용함 
+4. clearfix를 사용합니다.(O)
+*/
+
+/* 전체메뉴 */
+.nav {
+        display: inline-block;
+        width: 100%;
+        padding: 30px 0;
+}
+
+.nav>div {
+        float: left;
+        width: 33.3%;
+}
+
+/*>을 쓰면 바로밑에 자식만 가리킴.*/
+.nav>div h3 {
+        font-size: 18px;
+        color: #25a2d0;
+        margin-bottom: 2px;
+}
+
+.nav>div ol li {
+        float: left;
+        width: 50%;
+}
+
+.nav>div ol li a:hover {
+        text-decoration: underline;
+}
+
+/* 타이틀 */
+.tit {
+        position: relative;
+}
+
+.tit h2 {
+        padding: 5px 0;
+        letter-spacing: 2px;
+        font-size: 40px;
+        text-align: center;
+        font-family: 'Nanum Brush Script', cursive;
+        color: rgb(17, 103, 184);
+        font-weight: normal;
+}
+
+.tit .btn {
+        position: absolute;
+        top: 5px;
+        right: 0;
+        width: 60px;
+        height: 60px;
+        background: url(../img/icon.png) no-repeat 0 -600px;
+}
+.tit .btn.on {background-position: 0 -660px;}
+
+</style>
+</head>
+
+<body>
+
+    <!--header-->
+    <div id="contents">
+        <div id="cont_nav">
+            <div class="container">
+                <h2 class="ir_su">전체메뉴</h2>
+                <!--우리에겐 안보여도 되지만 시각장애인에겐 보여야함.?-->
+                <div class="nav">
+                    <div>
+                        <h3>Html Reference</h3>
+                        <ol>
+                            <li><a href="">Html 태그(tag)</a></li>
+                            <li><a href="">볼록요소/인라인요소</a></li>
+                            <li><a href="">DTD 선언</a></li>
+                            <li><a href="">언어속성설정</a></li>
+                            <li><a href="">Html Style</a></li>
+                            <li><a href="">Html html</a></li>
+                            <li><a href="">Html head</a></li>
+                            <li><a href="">Html div</a></li>
+                            <li><a href="">Html colgroup</a></li>
+                            <li><a href="">Html Caption</a></li>
+                        </ol>
+                    </div>
+                    <!--html reference-->
+                    <div>
+                        <h3>Css Reference</h3>
+                        <ol>
+                            <li><a href="">Html 태그(tag)</a></li>
+                            <li><a href="">볼록요소/인라인요소</a></li>
+                            <li><a href="">DTD 선언</a></li>
+                            <li><a href="">언어속성설정</a></li>
+                            <li><a href="">Html Style</a></li>
+                            <li><a href="">Html html</a></li>
+                            <li><a href="">Html head</a></li>
+                            <li><a href="">Html div</a></li>
+                            <li><a href="">Html colgroup</a></li>
+                            <li><a href="">Html Caption</a></li>
+                        </ol>
+                    </div>
+                    <!--CssReference-->
+                    <div>
+                        <h3>Web Reference</h3>
+                        <ol>
+                            <li><a href="">Html 태그(tag)</a></li>
+                            <li><a href="">볼록요소/인라인요소</a></li>
+                            <li><a href="">DTD 선언</a></li>
+                            <li><a href="">언어속성설정</a></li>
+                            <li><a href="">Html Style</a></li>
+                            <li><a href="">Html html</a></li>
+                        </ol>
+                    </div>
+                    <!--webstadard-->
+                </div>
+                <!--container-->
+            </div>
+            <!--cont_nav-->
+        </div>
+        <!--contents-->
+        <div id="cont_tit">
+            <div class="container">
+                <div class="tit">
+                 
+                    <a href="" class="btn"><span class="ir_pm">전체메뉴</span></a>
+
+                </div>
+                <!--tit-->
+            </div>
+            <!--container-->
+        </div>
+        <!--cont_tit-->
+    
+   
+    <!--script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        //버튼 클릭하면, 전체 메뉴를 보이게 하세요.
+        $(".tit .btn").click(function (e) {
+            e.preventDefault();
+        $("#cont_nav").slideToggle();
+        $(this).toggleClass("on");  
+        });
+    </script>
+
+</body>
+
+</html>
