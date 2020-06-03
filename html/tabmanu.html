@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <!--글자설정-->
+    <meta name="auther" content="webmaker">
+    <!--누가 썻는지, 만들었는지이름, 사이트에 대한 설명-->
+    <meta name="description" content="웹 표준을 준수한 사이트 예제입니다.">
+    <meta name="keywords" content="웹스토리보이, 웹표준, 웹접근성, 사이트">
+    <meta name="generator" content="breakets">
+    <title>layout08</title>
+
+    <!--CSS Style-->
+    <!--순서대로 적용되니까 우선순위생각해서 적용해야함.-->
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- <link rel="stylesheet" href="../css/Day02_8.css"> -->
+    <link rel="stylesheet" href="../slick/slick.css">
+
+
+    <!-- 웹폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+
+  <style>
+.tab_menu {position: relative; border: 1px solid #ccc; padding: 8px; height: 105px;}
+.tab_menu ul {overflow: hidden; border-bottom: 1px solid #ccc; }
+.tab_menu ul li {float: left; border: 1px solid #ccc; margin-right: -1px; margin-bottom: -1px; }
+.tab_menu ul li a {padding: 5px 10px; display: block;}
+.tab_menu ul li ul {position: absolute; left: 0; top: 48px; border: 0; width: 270px; }
+.tab_menu ul li ul li {float: none; border: 0; padding-left: 18px; background: url(../img/dot.gif) no-repeat 9px 8px;}
+.tab_menu ul li ul li a {padding: 0 0 3px 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 100%;}
+.tab_menu ul li.active {background: #2c94c4;}
+.tab_menu ul li.active a {color: #fff;}
+.tab_menu ul li.active ul li a {color: #333;}
+      
+  </style>
+
+</head>
+
+<body>
+    <!--#wrap>div*3 이렇게 쓰면 id가 wrap에 속한 div3개가 만들어짐
+    클래스를 넣을거면 .container쓰면 바로 class div가 나옴
+    #써서 하는거 여러개도 가능함-->
+
+    <!-- 스킵네비게이션 -->
+
+                    <div class="column col5">
+                        <h3><span class="ico_img ir_pm">아이콘</span><span class="ico_tit">Notice</span></h3>
+                        <p class="ico_desc">가장 웹페이지에서 기본이 되는 게시판 유형입니다.</p>
+                        <!-- 탭 메뉴 -->
+                        <div class="tab_menu">
+                            <h4 class="ir_su">탭 메뉴</h4>
+                            <ul>
+                                <li class="active"><a href="#">공지사항1</a>
+                                    <ul>
+                                        <li><a href="#">첫 번째 공지사항 탭메뉴 테스트 목록입니다. 첫 번째 공지사항 탭메뉴 테스트 목록입니다.</a></li>
+                                        <li><a href="#">첫 번째 공지사항 탭메뉴 테스트 목록입니다. 첫 번째 공지사항 탭메뉴 테스트 목록입니다.</a></li>
+                                        <li><a href="#">첫 번째 공지사항 탭메뉴 테스트 목록입니다. 첫 번째 공지사항 탭메뉴 테스트 목록입니다.</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">공지사항2</a>
+                                    <ul>
+                                        <li><a href="#">두 번째 공지사항 탭메뉴 테스트 목록입니다.</a></li>
+                                        <li><a href="#">두 번째 공지사항 탭메뉴 테스트 목록입니다.</a></li>
+                                        <li><a href="#">두 번째 공지사항 탭메뉴 테스트 목록입니다.</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">공지사항3</a>
+                                    <ul>
+                                        <li><a href="#">세 번째 공지사항 탭메뉴 테스트 목록입니다.</a></li>
+                                        <li><a href="#">세 번째 공지사항 탭메뉴 테스트 목록입니다.</a></li>
+                                        <li><a href="#">세 번째 공지사항 탭메뉴 테스트 목록입니다.</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- //탭 메뉴 -->
+            
+          
+
+    <!--script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../slick/slick.js"></script>
+
+    <script type="text/javascript">
+
+        tab메뉴
+        var $tab_list = $(".tab_menu");
+
+        $tab_list.find("ul ul").hide();
+        $tab_list.find("li .active > ul").show();
+
+        function tabMenu(e) {
+            e.preventDefault();
+            var $this = $(this);
+            $this.next("ul").show().parent("li").addClass("active").siblings("li").removeClass("active").find(">ul").hide();
+            //메서드만 알면 연결해서 설명그대로 넣을 수있음.
+            $tab_list.find("ul>li>a").click(tabMenu).focus(tabMenu);
+        }
+
+    </script>
+
+</body>
+
+</html>
