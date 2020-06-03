@@ -415,13 +415,13 @@
                             </div>
                             <!--gallery_btn-->
                             <div class="gallery_img">
-                                <ul>
-                                    <li><a href=""><img src="../img/gallery01.jpg" alt="갤러리1"></a></li>
-                                    <li><a href=""><img src="../img/gallery02.jpg" alt="갤러리2"></a></li>
-                                    <li><a href=""><img src="../img/gallery03.jpg" alt="갤러리3"></a></li>
-                                    <li><a href=""><img src="../img/gallery04.jpg" alt="갤러리4"></a></li>
-                                    <li><a href=""><img src="../img/gallery05.jpg" alt="갤러리5"></a></li>
-                                </ul>
+                              
+                                    <div><a href=""><img src="../img/gallery01.jpg" alt="갤러리1"></a></div>
+                                    <div><a href=""><img src="../img/gallery02.jpg" alt="갤러리2"></a></div>
+                                    <div><a href=""><img src="../img/gallery03.jpg" alt="갤러리3"></a></div>
+                                    <div><a href=""><img src="../img/gallery04.jpg" alt="갤러리4"></a></div>
+                                    <div><a href=""><img src="../img/gallery05.jpg" alt="갤러리5"></a></div>
+                       
                             </div>
                             <!--gallery_img-->
                         </div>
@@ -495,18 +495,28 @@
         });
 
         //tab메뉴
-        var $tab_list = $(".tab_menu");
+        // var $tab_list = $(".tab_menu");
 
-        $tab_list.find("ul ul").hide();
-        $tab_list.find("li .active > ul").show();
+        // $tab_list.find("ul ul").hide();
+        // $tab_list.find("li .active > ul").show();
 
-        function tabMenu(e) {
-            e.preventDefault();
-            var $this = $(this);
-            $this.next("ul").show().parent("li").addClass("active").siblings("li").removeClass("active").find(">ul").hide();
-            //메서드만 알면 연결해서 설명그대로 넣을 수있음.
-            $tab_list.find("ul>li>a").click(tabMenu).focus(tabMenu);
-        }
+        // function tabMenu(e) {
+        //     e.preventDefault();
+        //     var $this = $(this);
+        //     $this.next("ul").show().parent("li").addClass("active").siblings("li").removeClass("active").find(">ul").hide();
+        //     //메서드만 알면 연결해서 설명그대로 넣을 수있음.
+        //     $tab_list.find("ul>li>a").click(tabMenu).focus(tabMenu);
+        // }
+//갤러리
+        $("gallery_img").slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplayspeed: 3000,
+            dots: true,
+        });
+
     </script>
 
 </body>
