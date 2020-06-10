@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+/*레이어 팝업*/
+#widowlayer {
+    border: 10px solid #dceff7;
+    display: block;
+}
+
+#widowlayer img {
+    width: 100%;
+    display: block;
+}
+/*이미지는 인라인이기때문에, 폰트사이즈나 lineheight가 숨어져있어서 공간을 차지함.
+그래서 블락으로 해주면 사라짐.*/
+
+    </style>
+</head>
+<body>
+    <div id="widowlayer">
+        <img src="../img/webstandard1.jpg" alt="">
+        <!-- <a href="#" class="close">Close</a> -->
+    </div>
+</body>
+</html>
