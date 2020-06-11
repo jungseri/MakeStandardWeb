@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형웹디자인 DAY01~2_시멘틱태그, 미디어쿼리</title>
+
+<style>
+    body{background: #111111;; color: white;}
+    h1::before{content: '1.';}
+    h1::after{content: ' 기본';}
+
+/*화면 너비가 0~1028px*/
+@media(max-width:1280px){
+    body{background: #222222;}
+    h1::before{content: '2.';}
+    h1::after{content: '1025px ~ 1280px';}
+}
+/*화면 너비가 0~1024px*/
+@media(max-width:1224px){
+    body{background: #333333;}
+    h1::before{content: '3.';}
+    h1::after{content: '961px ~ 1224px';}
+}
+/*화면 너비가 0~960px*/
+@media(max-width:960px){
+    body{background: #444444;}
+    h1::before{content: '4.';}
+    h1::after{content: '769px ~ 960px';}
+}
+/*화면 너비가 0~768px*/
+@media(max-width:768px){
+    body{background: #555555;}
+    h1::before{content: '5.';}
+    h1::after{content: '576px ~ 769px';}
+}
+/*화면 너비가 0~576px*/
+@media(max-width:576px){
+    body{background: #666666;}
+    h1::before{content: '6.';}
+    h1::after{content: '0px ~ 576px';}
+}
+/* #wrap{width: 1000px;}
+.header{width: 1000px; height: 100px; background: #111111;}
+.nav{width: 1000px; height: 100px; background: #222222;}
+.side{width: 300px; height: 600px; background: #333333;}
+.contents{width: 700px; height: 600px; background: #444444;}
+.footer{width: 1000px; height: 100px; background: #555555;} */
+</style>
+</head>
+<body>
+    <h1>미디어쿼리</h1>
+    <p>미디어 쿼리는 화면 크기에 따른 각각의 속성값을 지정하며, 여러가지 화면을 구성하는 기술 입니다.</p>
+    <p>@media only all and(조건문){실행문}</p>
+    <ul>
+        <li>@midia : 미디어 쿼리가 시작됨</li>
+        <li>only : 미디어 쿼리 구문을 해석하라는 명령어(생략가능)</li>
+        <li>all : 미디어 쿼리를 해석해야할 대상을 나타냄.(생략가능)
+            <ul>
+                <li>@midia : 미디어 쿼리가 시작됨</li>
+                <li>only : 미디어 쿼리 구문을 해석하라는 명령어(생략가능)</li>
+                <li>all : 미디어 쿼리를 해석해야할 대상을 나타냄.(생략가능)</li>
+                <li>and : 앞과 뒤의 조건을 나타냄.(생략가능)</li>
+                <li>(조건문) : 해당 조건을 설정할 수 있습니다.</li>
+                <li>{실행문} : 조건에 따른 실행을 설정합니다.</li>
+            </ul>
+        </li>
+        <li>and : 앞과 뒤의 조건을 나타냄.(생략가능)</li>
+        <li>(조건문) : 해당 조건을 설정할 수 있습니다.</li>
+        <li>{실행문} : 조건에 따른 실행을 설정합니다.</li>
+    </ul>
+    <div id="wrap">
+        <header></header>
+        <nav></nav>
+        <aside></aside>
+        <seciton></disecitonv>
+        <footer></footer>
+    </div>
+</body>
+
+</html>

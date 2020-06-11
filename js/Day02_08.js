@@ -39,7 +39,8 @@ $(document).ready(function () {
     function tabMenu(e) {
         e.preventDefault();
         var $this = $(this);
-        $this.next("ul").show().parent("li").addClass("active").siblings("li").removeClass("active").find(">ul").hide();
+        $this.next("ul").show().parent("li").addClass("active").siblings("li")
+        .removeClass("active").find(">ul").hide();
         //메서드만 알면 연결해서 설명그대로 넣을 수있음.
     }
         $tab_list.find("ul>li>a").click(tabMenu).focus(tabMenu);
