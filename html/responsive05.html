@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        body {
+            background: #666666;
+        }
+
+        header {
+            width: 100%;
+            height: 100px;
+            background: #aaaaaa;
+        }
+
+        aside {
+            width: 30%;
+            height: 900px;
+            background: #888888;
+            float: left;
+        }
+
+        section {
+            width: 70%;
+            height: 300px;
+            float: left;
+        }
+
+        .article01 {
+            background: #336363;
+        }
+
+        .article02 {
+            background: #b1d1b1;
+        }
+
+        .article03 {
+            background: #d69d9d;
+        }
+
+        footer {
+            width: 100%;
+            height: 100px;
+            background: #999999;
+            clear: both;
+        }
+
+        /*미디어쿼리 0~1200*/
+        @media(max-width: 1240px) {
+            #wrap {
+                width: 100%;
+            }
+            aside{
+                height: 900px;
+            }
+            .article01 {
+                height: 450px;
+            }
+
+            .article02 {
+                height: 450px;
+            }
+
+            .article03 {
+                width: 100%;
+            }
+        }
+
+        @media(max-width: 980px) {}
+
+        @media(max-width: 768px) {
+            aside{
+                width: 100%;
+                height: 300px;
+            }
+
+            .article01 {
+               width: 50%;
+            }
+
+            .article02 {
+                width: 50%;
+            }
+        }
+
+        @media(max-width: 480px) {
+            .article01 {
+               width: 100%;
+            }
+
+            .article02 {
+                width: 100%;
+
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header></header>
+        <aside class="aside"></aside>
+        <section class="article01"></section>
+        <section class="article02"></section>
+        <section class="article03"></section>
+        <footer></footer>
+    </div>
+</body>
+
+</html>
