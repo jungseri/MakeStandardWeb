@@ -225,7 +225,10 @@
         height: 60px;
         background: url(../img/icon.png) no-repeat 0 -600px;
 }
-.tit .btn.on {background-position: 0 -660px;}
+
+.tit .btn .on {
+        background-position: 0 -660px;
+}
 
 /* 배너
 .ban {
@@ -360,6 +363,7 @@
         background: #5dbfeb;
         border-radius: 50%;
 }
+
 /*활성화된 원 색이 바뀜*/
 .ban .slick-dots li .slick-active button {
         background: #2b91c8;
@@ -700,16 +704,64 @@ overflow: hidden; text-overflow: ellipsis; white-space: nowrap; : 긴문장 한�
 
 */
 /* 탭 메뉴 */
-.tab_menu {position: relative; border: 1px solid #ccc; padding: 8px; height: 105px;}
-.tab_menu ul {overflow: hidden; border-bottom: 1px solid #ccc; }
-.tab_menu ul li {float: left; border: 1px solid #ccc; margin-right: -1px; margin-bottom: -1px; }
-.tab_menu ul li a {padding: 5px 10px; display: block;}
-.tab_menu ul li ul {position: absolute; left: 0; top: 48px; border: 0; width: 270px; }
-.tab_menu ul li ul li {float: none; border: 0; padding-left: 18px; background: url(../img/dot.gif) no-repeat 9px 8px;}
-.tab_menu ul li ul li a {padding: 0 0 3px 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 100%;}
-.tab_menu ul li.active {background: #2c94c4;}
-.tab_menu ul li.active a {color: #fff;}
-.tab_menu ul li.active ul li a {color: #333;}
+.tab_menu {
+        position: relative;
+        border: 1px solid #ccc;
+        padding: 8px;
+        height: 105px;
+}
+
+.tab_menu ul {
+        overflow: hidden;
+        border-bottom: 1px solid #ccc;
+}
+
+.tab_menu ul li {
+        float: left;
+        border: 1px solid #ccc;
+        margin-right: -1px;
+        margin-bottom: -1px;
+}
+
+.tab_menu ul li a {
+        padding: 5px 10px;
+        display: block;
+}
+
+.tab_menu ul li ul {
+        position: absolute;
+        left: 0;
+        top: 48px;
+        border: 0;
+        width: 270px;
+}
+
+.tab_menu ul li ul li {
+        float: none;
+        border: 0;
+        padding-left: 18px;
+        background: url(../img/dot.gif) no-repeat 9px 8px;
+}
+
+.tab_menu ul li ul li a {
+        padding: 0 0 3px 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100%;
+}
+
+.tab_menu ul li.active {
+        background: #2c94c4;
+}
+
+.tab_menu ul li.active a {
+        color: #fff;
+}
+
+.tab_menu ul li.active ul li a {
+        color: #333;
+}
 
 /*게시판 5-2 탭메뉴*/
 .notice4 {
@@ -763,11 +815,13 @@ overflow: hidden; text-overflow: ellipsis; white-space: nowrap; : 긴문장 한�
         width: 40%;
         text-align: right;
 }
-.notice4>a{
-position: absolute;
-    right: 9px;
-    top: 9px;
+
+.notice4>a {
+        position: absolute;
+        right: 9px;
+        top: 9px;
 }
+
 /*text-overflow: ellipsis; : */
 /*em과 span*/
 
@@ -775,69 +829,75 @@ position: absolute;
 .gallery {
         border: 1px solid #ccc;
         position: relative;
-        height: 254px; overflow: hidden;
-    }
-    
-    .gallery h4 {
+        height: 254px;
+        overflow: hidden;
+}
+
+.gallery h4 {
         font-size: 14px;
         color: #2c94c4;
         border-bottom: 1px solid #ccc;
         padding: 10px 0px 10px 11px;
         font-weight: bold;
         margin: 0;
-    }
-    .gallery .gallery_btn{
-        position: absolute; right: 5px;top: 7px;
-    }
-    .gallery .gallery_btn button{
-       float: left;
+}
+
+.gallery .gallery_btn {
+        position: absolute;
+        right: 5px;
+        top: 7px;
+}
+
+.gallery .gallery_btn button {
+        float: left;
         margin: 1px 2px;
         display: block;
         width: 23px;
         height: 23px;
         background: url(../img/icon.png) no-repeat;
         border: none;
-    }
+}
 
-    .gallery .gallery_btn button span{
+.gallery .gallery_btn button span {
         display: none;
-    }
-    
-    .gallery .gallery_btn .gb_icon1{
+}
+
+.gallery .gallery_btn .gb_icon1 {
         background-position: -150px -120px;
-    }
-    
-    .gallery .gallery_btn .gb_icon2{
+}
+
+.gallery .gallery_btn .gb_icon2 {
         background-position: -150px -143px;
-    }
-    
-    .gallery .gallery_btn .gb_icon3{
+}
+
+.gallery .gallery_btn .gb_icon3 {
         background-position: -150px -166px;
-    }
-    
-    .gallery .gallery_btn .gb_icon4{
+}
+
+.gallery .gallery_btn .gb_icon4 {
         background-position: -150px -189px;
-    }
-    
-    .gallery .gallery_btn .gb_icon1:hover {
+}
+
+.gallery .gallery_btn .gb_icon1:hover {
         background-position: -173px -120px;
-    }
-    
-    .gallery .gallery_btn .gb_icon2:hover {
+}
+
+.gallery .gallery_btn .gb_icon2:hover {
         background-position: -173px -143px;
-    }
-    
-    .gallery .gallery_btn .gb_icon3:hover {
+}
+
+.gallery .gallery_btn .gb_icon3:hover {
         background-position: -173px -166px;
-    }
-    
-    .gallery .gallery_btn .gb_icon4:hover {
+}
+
+.gallery .gallery_btn .gb_icon4:hover {
         background-position: -173px -189px;
-    }
-    .gallery .gallery_img div img {
+}
+
+.gallery .gallery_img div img {
         width: 100%;
 
-    }
+}
 
 /* .login{background: #ccc; width: 100%; height: 150px;}
 .login span {color:#333;}
@@ -993,25 +1053,28 @@ position: absolute;
         box-shadow: 10px 10px rgba(0, 0, 0, 0.4);
         display: none;
         z-index: 9999;
-    }
-    
-    #layer img {
+}
+
+#layer img {
         width: 100%;
         display: block;
-    }
-    /*이미지는 인라인이기때문에, 폰트사이즈나 lineheight가 숨어져있어서 공간을 차지함.
+}
+
+/*이미지는 인라인이기때문에, 폰트사이즈나 lineheight가 숨어져있어서 공간을 차지함.
     그래서 블락으로 해주면 사라짐.*/
-    #layer .close {
+#layer .close {
         position: absolute;
         right: 20px;
         top: 20px;
         background: #0093bd;
         padding: 1px 6px;
         color: #fff;
-    }
-    #layer .close:hover{
+}
+
+#layer .close:hover {
         text-decoration: underline;
-    } 
-    .hidden{
-display: none;
-    }
+}
+
+.hidden {
+        display: none;
+}
